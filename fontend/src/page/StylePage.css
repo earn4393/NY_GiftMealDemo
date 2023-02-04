@@ -1,0 +1,138 @@
+.WrapperPage {
+	background: #d90429;
+	background-image: url("../images/snows.svg");
+	background-size: contain;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+}
+
+.WrapperLayout {
+	display: flex;
+	flex-direction: row;
+}
+
+.LayoutHome {
+	max-width: 600px;
+	margin: 20px;
+	padding: 40px 20px;
+	background: #73ba9b;
+	display: block;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
+}
+
+.Layout {
+	max-width: 600px;
+	height: 400px;
+	margin: 20px;
+	padding: 40px 20px;
+	background: #73ba9b;
+	display: block;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
+}
+
+.LayoutPage {
+	min-width: 600px;
+	margin: 20px;
+	padding: 40px 20px;
+	background: #73ba9b;
+	display: block;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
+}
+
+.Title {
+	font-size: 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+.Divider {
+	margin: 20px 0;
+}
+
+.boxInput {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.Input {
+	background-color: #f6f6f6;
+	border: none;
+	color: #0d0d0d;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 20px;
+	width: 80%;
+	border: 2px solid #f6f6f6;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.Input:focus {
+	background-color: #fff;
+	outline: none;
+	border-bottom: 2px solid #76949c;
+}
+
+.returnHome {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.icon {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+img {
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+}
+
+.icons {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+@media screen and (max-width: 500px) {
+	.LayoutPage {
+		min-width: 350px;
+	}
+	.WrapperLayout {
+		display: flex;
+		flex-direction: column;
+	}
+	.LayoutHome {
+		max-width: 350px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.Layout {
+		max-width: 350px;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
