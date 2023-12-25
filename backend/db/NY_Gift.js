@@ -1,9 +1,9 @@
 //  config database
 var config ={
-    user: "testdb",
-    password: "Pa$$w0rd",
-    server: "10.201.128.66\\TRAININGDB",
-    database: "NY_Gift",
+    user: "username",
+    password: "password",
+    server: "server IP",
+    database: "name database",
     "options": {
         trustedconnection:true,
     },
