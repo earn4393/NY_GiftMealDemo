@@ -1,37 +1,33 @@
 import { Link } from 'react-router-dom';
 import './StylePage.css';
-import gift from '../images/mdi_gift.svg';
-import food from '../images/material-symbols_food-bank.svg';
-import check from '../images/material-symbols_check-circle.svg';
 import Graphs from './Graphs';
+import { Icon } from '@iconify/react';
+import checkO from '@iconify/icons-gg/check-o';
+import foodOutline from '@iconify/icons-mdi/food-outline';
+import giftOutline from '@iconify/icons-mdi/gift-outline';
 
 // show graphs and link to Food Page Gift Page and Check Status Page 
 const Home = () => {
 	return (
-		<div className="WrapperPage">
-			<div className="WrapperLayout">
-				<div className="Layout">
-					<div className="Title">Mary Christmas</div>
-					<div className="Divider" />
-					<div className="icons">
-						<div className="icon">
-							<img src={gift} />
-							<Link to="/gift">Gift</Link>
-						</div>
-						<div className="icon">
-							<img src={food} />
-							<Link to="/food">Meal</Link>
-						</div>
-						<div className="icon">
-							<img src={check} />
-							<Link to="/check">Check Status</Link>
-						</div>
-					</div>
-				</div>
-				<div className="LayoutHome">
-					<Graphs />
+		<div className="snowflakes-container">
+			<div className="layout">
+				<div className="title">Mary Christmas</div>
+				<div className="icons">
+					<Link to="/gift" className="icon" target="_blank">
+						<Icon icon={giftOutline} width="35" />
+						<div >Gift</div>
+					</Link>
+					<Link to="/food" className="icon" target="_blank">
+						<Icon icon={foodOutline} width="35" />
+						<div >Meal</div>
+					</Link>
+					<Link to="/check" className="icon" target="_blank">
+						<Icon icon={checkO} width="35" />
+						<div >Check Status</div>
+					</Link>
 				</div>
 			</div>
+			<Graphs />
 		</div>
 	);
 };

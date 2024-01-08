@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import Handheld from '../Handheld';
 import './StylePage.css'
 
@@ -7,14 +6,10 @@ import './StylePage.css'
 
 const FoodPage = () => {
     return (
-        <div className='WrapperPage'>
-            <div className='LayoutPage'>
-                <div className='Title'>Meal</div>
-                <div className='Divider' />
+        <div className="snowflakes-container" >
+            <div className="green-background">
+                <div className='title'>Meal</div>
                 <Handheld state="food" />
-                <div className='Divider' />
-                <div className='returnHome'>
-                </div>
             </div>
         </div>
     )

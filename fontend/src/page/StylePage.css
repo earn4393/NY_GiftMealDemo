@@ -1,138 +1,170 @@
-.WrapperPage {
-	background: #d90429;
-	background-image: url("../images/snows.svg");
+.snowflakes-container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #d90429;
+	background-image: url('../images/snows.svg');
 	background-size: contain;
+	background-repeat: repeat;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 	font-family: "Poppins", sans-serif;
 }
 
-.WrapperLayout {
+
+.wrapper-layout {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-self: center;
+	align-items: center;
 }
 
-.LayoutHome {
-	max-width: 600px;
-	margin: 20px;
-	padding: 40px 20px;
-	background: #73ba9b;
-	display: block;
-	border-radius: 10px 10px 0 0;
-	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
-}
-
-.Layout {
-	max-width: 600px;
-	height: 400px;
-	margin: 20px;
-	padding: 40px 20px;
-	background: #73ba9b;
-	display: block;
-	border-radius: 10px 10px 0 0;
-	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
-}
-
-.LayoutPage {
+.layout {
 	min-width: 600px;
 	margin: 20px;
 	padding: 40px 20px;
 	background: #73ba9b;
 	display: block;
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 10px 10px;
 	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
 }
 
-.Title {
-	font-size: 1.5em;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-top: 15px;
-}
 
-.Divider {
-	margin: 20px 0;
-}
 
-.boxInput {
+.info-block {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center;
-}
-
-.Input {
-	background-color: #f6f6f6;
-	border: none;
-	color: #0d0d0d;
-	padding: 15px 32px;
+	background-color: #f5f0ec;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-	margin: 20px;
-	width: 80%;
-	border: 2px solid #f6f6f6;
-	-webkit-border-radius: 5px 5px 5px 5px;
-	border-radius: 5px 5px 5px 5px;
+	width: 18vw;
+	border-radius: 3px;
+	float: left;
+	padding: 4px 0;
+	margin: 5px;
+	box-shadow: 0 10px 20px 0 rgb(0 0 0 / 30%);
 }
 
-.Input:focus {
-	background-color: #fff;
-	outline: none;
-	border-bottom: 2px solid #76949c;
+dt,
+dd {
+	margin: 0;
+	padding: 0;
 }
 
-.returnHome {
-	display: flex;
-	flex-direction: row-reverse;
+dt {
+	font-size: 36px;
+	font-weight: bold;
 }
+
+dd {
+	font-size: 18px;
+}
+
 
 .icon {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	text-decoration: none;
+	padding: 2.5px;
+	color: black;
+	border-style: solid;
+	margin: 0px 0px 0px 5px;
 }
 
-img {
-	width: 60px;
-	height: 60px;
-	margin-right: 10px;
-}
 
 .icons {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: wrow;
+	justify-content: center;
+	align-items: center;
+	/* border-style: solid;
+	border-color: #d90429; */
+}
+
+
+/* All Page except Home  */
+
+.green-background {
+	background-color: #73ba9b;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
+	width: 70vw;
+	height: 30vh;
+	padding: 40px 20px;
+	margin: 20px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 30px 60px 0 rgb(0 0 0 / 30%);
 }
 
-@media screen and (max-width: 500px) {
-	.LayoutPage {
-		min-width: 350px;
+.user-input {
+	width: 60vw;
+	padding: 10px;
+	margin-top: 50px;
+	font-size: 3vw;
+	background-color: #f6f6f6;
+	color: #0d0d0d;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid #f6f6f6;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.title {
+	font-size: 6.5vh;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.my-swal-text-size {
+	font-size: 2vw;
+}
+
+
+
+@media (max-width: 700px) {
+
+	.layout {
+		min-width: 300px;
 	}
-	.WrapperLayout {
-		display: flex;
-		flex-direction: column;
+
+	.green-background {
+		height: 30vh;
 	}
-	.LayoutHome {
-		max-width: 350px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+
+	.title {
+		margin-bottom: 20px;
 	}
-	.Layout {
-		max-width: 350px;
-		height: 200px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+
+	.user-input {
+		font-size: 6vw;
+		margin-top: 0px;
+	}
+
+	.info-block {
+		width: 45vw;
+	}
+
+	dt {
+		font-size: 28px;
+	}
+
+	dd {
+		font-size: 12px;
+	}
+
+	.my-swal-text-size {
+		font-size: 6vw;
 	}
 }
