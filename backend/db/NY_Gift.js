@@ -1,16 +1,18 @@
 //  config database
-var config ={
-    user: "username",
-    password: "password",
-    server: "server IP",
-    database: "name database",
-    "options": {
-        trustedconnection:true,
-    },
-    driver:"msnodesqlv8",
-  }
+var sql = require('mssql');
 
-  module.exports = config;
+var config = new sql.ConnectionPool({
+  user: "username",
+  password: "password",
+  server: "server IP",
+  database: "name database",
+  "options": {
+    trustedconnection: true,
+    enableArithAbort: true
+  },
+})
+
+module.exports = config;
 
 
 // teating database connection
@@ -23,7 +25,7 @@ var config ={
 
 //    //make the query
 
-//     var query = "select * from tbl_EMPLOYEE where EMPLOYEE_ID = 1";  
+//     var query = "select * from tbl_EMPLOYEE where EMPLOYEE_ID = 1";
 
 //     request.query(query,function(err,records) {
 //         if(err){
